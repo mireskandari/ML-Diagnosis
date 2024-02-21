@@ -1,0 +1,162 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'gui.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(975, 738)
+        font = QtGui.QFont()
+        font.setFamily("Dast Nevis")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
+        MainWindow.setFont(font)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setStyleSheet("\n"
+"background-color: rgb(40, 40, 40);\n"
+"color : white;")
+        self.centralwidget.setObjectName("centralwidget")
+        self.predict_button = QtWidgets.QPushButton(self.centralwidget)
+        self.predict_button.setGeometry(QtCore.QRect(770, 100, 141, 61))
+        font = QtGui.QFont()
+        font.setFamily("Gadugi")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.predict_button.setFont(font)
+        self.predict_button.setStyleSheet("background-color: rgb(255, 199, 69);\n"
+"color : rgb(0, 0, 0);")
+        self.predict_button.setIconSize(QtCore.QSize(20, 20))
+        self.predict_button.setCheckable(True)
+        self.predict_button.setObjectName("predict_button")
+        self.prediction_table = QtWidgets.QTableWidget(self.centralwidget)
+        self.prediction_table.setGeometry(QtCore.QRect(50, 330, 871, 361))
+        self.prediction_table.setMaximumSize(QtCore.QSize(16777215, 361))
+        self.prediction_table.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color : rgb(0, 0, 0);")
+        self.prediction_table.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
+        self.prediction_table.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.prediction_table.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustIgnored)
+        self.prediction_table.setSelectionMode(QtWidgets.QAbstractItemView.NoSelection)
+        self.prediction_table.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.prediction_table.setWordWrap(True)
+        self.prediction_table.setCornerButtonEnabled(False)
+        self.prediction_table.setRowCount(0)
+        self.prediction_table.setColumnCount(2)
+        self.prediction_table.setObjectName("prediction_table")
+        item = QtWidgets.QTableWidgetItem()
+        self.prediction_table.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.prediction_table.setHorizontalHeaderItem(1, item)
+        self.prediction_table.horizontalHeader().setCascadingSectionResizes(True)
+        self.prediction_table.horizontalHeader().setDefaultSectionSize(280)
+        self.prediction_table.horizontalHeader().setMinimumSectionSize(30)
+        self.prediction_table.horizontalHeader().setStretchLastSection(True)
+        self.prediction_table.verticalHeader().setVisible(False)
+        self.selected_symptoms = QtWidgets.QTextBrowser(self.centralwidget)
+        self.selected_symptoms.setGeometry(QtCore.QRect(50, 240, 871, 61))
+        self.selected_symptoms.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"color : rgb(0, 0, 0);")
+        self.selected_symptoms.setObjectName("selected_symptoms")
+        self.select_symptoms_text = QtWidgets.QLabel(self.centralwidget)
+        self.select_symptoms_text.setGeometry(QtCore.QRect(50, 110, 311, 41))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.select_symptoms_text.setFont(font)
+        self.select_symptoms_text.setAlignment(QtCore.Qt.AlignCenter)
+        self.select_symptoms_text.setWordWrap(False)
+        self.select_symptoms_text.setObjectName("select_symptoms_text")
+        self.symptoms = QtWidgets.QComboBox(self.centralwidget)
+        self.symptoms.setGeometry(QtCore.QRect(400, 100, 341, 61))
+        font = QtGui.QFont()
+        font.setFamily("Compset")
+        font.setBold(False)
+        font.setWeight(50)
+        self.symptoms.setFont(font)
+        self.symptoms.setStyleSheet("color : rgb(0, 0, 0);\n"
+"background-color: rgb(255, 199, 69);")
+        self.symptoms.setEditable(False)
+        self.symptoms.setObjectName("symptoms")
+        self.selected_symptoms_text = QtWidgets.QTextBrowser(self.centralwidget)
+        self.selected_symptoms_text.setGeometry(QtCore.QRect(50, 190, 171, 31))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.selected_symptoms_text.setFont(font)
+        self.selected_symptoms_text.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.selected_symptoms_text.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.selected_symptoms_text.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.selected_symptoms_text.setAcceptRichText(False)
+        self.selected_symptoms_text.setObjectName("selected_symptoms_text")
+        self.delete_last = QtWidgets.QPushButton(self.centralwidget)
+        self.delete_last.setGeometry(QtCore.QRect(230, 190, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.delete_last.setFont(font)
+        self.delete_last.setStyleSheet("background-color: rgb(200, 200, 200);\n"
+"color : rgb(0, 0, 0);")
+        self.delete_last.setObjectName("delete_last")
+        self.symptom_error = QtWidgets.QLabel(self.centralwidget)
+        self.symptom_error.setGeometry(QtCore.QRect(660, 190, 261, 31))
+        font = QtGui.QFont()
+        font.setFamily("Vazir")
+        font.setPointSize(12)
+        self.symptom_error.setFont(font)
+        self.symptom_error.setStyleSheet("\n"
+"color: rgb(255, 153, 0);")
+        self.symptom_error.setObjectName("symptom_error")
+        self.delete_all = QtWidgets.QPushButton(self.centralwidget)
+        self.delete_all.setGeometry(QtCore.QRect(340, 190, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.delete_all.setFont(font)
+        self.delete_all.setStyleSheet("background-color: rgb(200, 200, 200);\n"
+"color : rgb(0, 0, 0);")
+        self.delete_all.setObjectName("delete_all")
+        self.delete_table = QtWidgets.QPushButton(self.centralwidget)
+        self.delete_table.setGeometry(QtCore.QRect(450, 190, 101, 31))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.delete_table.setFont(font)
+        self.delete_table.setStyleSheet("background-color: rgb(200, 200, 200);\n"
+"color : rgb(0, 0, 0);")
+        self.delete_table.setObjectName("delete_table")
+        MainWindow.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.predict_button.setText(_translate("MainWindow", "Predict !"))
+        self.prediction_table.setSortingEnabled(False)
+        item = self.prediction_table.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "Predicted Disease"))
+        item = self.prediction_table.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "Percentage (%)"))
+        self.select_symptoms_text.setText(_translate("MainWindow", "Select symptoms :"))
+        self.selected_symptoms_text.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'Dast Nevis\'; font-size:11pt;\">Selected symptoms :</span></p></body></html>"))
+        self.delete_last.setText(_translate("MainWindow", "Delete Last "))
+        self.symptom_error.setText(_translate("MainWindow", "Symptoms already selected !"))
+        self.delete_all.setText(_translate("MainWindow", "Delete All"))
+        self.delete_table.setText(_translate("MainWindow", "Delete Table"))
+
